@@ -1,0 +1,46 @@
+
+
+/* utility classes */
+.bg-color-primary {
+  background-color: white;
+}
+
+.bg-color-secondary {
+  background-color: olivedrab;
+  color: white;
+}
+
+.color-primary {
+  color: #000;
+}
+
+input, textarea {
+  all: unset;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 1px solid #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px #f7f7f7;
+}
+
+input:active, input:focus, textarea:active, textarea:focus {
+  border: 2px solid   #f7f7f7;
+}
+
+
+/* dark theme */
+.bg-color-primary-dark {
+  background-color: #212121;
+}
+
+.bg-color-secondary-dark {
+  background: #424242;
+  color: white;
+}
+
+.color-dark {
+  color: #fff;
+}
