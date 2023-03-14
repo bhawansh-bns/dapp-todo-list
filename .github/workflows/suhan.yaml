@@ -1,0 +1,25 @@
+name: Run Fast Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to docker
+        uses: docker/login-action@v1
+        with:
+          username: searaph
+          password: password@123
+
+      - name: Pull docker image
+        run: docker pull searaph/gitlab-fastscan
+
+      - name: Run docker container
+        run: docker run -v $(pwd):/fastScan/sourceCode searaph/gitlab-fastscan /fastScan/sourceCode -n suhan
